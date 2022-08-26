@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdlib.h>
+#include <limits.h>
 
 
 /**
@@ -58,5 +59,7 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+int binary_tree_is_bst(const binary_tree_t *tree);
+int helper(const binary_tree_t *tree, int min, int max);
 
 #endif /* _BINARY_TREES_H_ */
