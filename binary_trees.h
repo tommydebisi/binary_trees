@@ -4,6 +4,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <stdio.h>
 
 
 /**
@@ -64,5 +65,7 @@ int helper(const binary_tree_t *tree, int min, int max);
 bst_t *bst_insert(bst_t **tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
 bst_t *bst_search(const bst_t *tree, int value);
-
+bst_t *bst_remove(bst_t *root, int value);
+bst_t *min_child(bst_t *node, int min);
+void update_parent(bst_t *node, bst_t *set_add);
 #endif /* _BINARY_TREES_H_ */
