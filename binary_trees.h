@@ -60,6 +60,8 @@ binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+
+/* Binary Search Tree */
 int binary_tree_is_bst(const binary_tree_t *tree);
 int helper(const binary_tree_t *tree, int min, int max);
 bst_t *bst_insert(bst_t **tree, int value);
@@ -68,4 +70,10 @@ bst_t *bst_search(const bst_t *tree, int value);
 bst_t *bst_remove(bst_t *root, int value);
 bst_t *min_child(bst_t *node, int min);
 void update_parent(bst_t *node, bst_t *set_add);
+
+/* AVL tree */
+int binary_tree_is_avl(const binary_tree_t *tree);
+int binary_height2(const binary_tree_t *tree);
+int binary_balance2(const binary_tree_t *tree);
+
 #endif /* _BINARY_TREES_H_ */
